@@ -1,0 +1,3 @@
+{
+    "files": ["main.py","ui/Mopho.ui","src/midi.py","README.md","src/varlists.py","setup.py"]
+}
