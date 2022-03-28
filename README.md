@@ -11,12 +11,20 @@ Initial i leaved it that way for some time and now i am thinking about getting a
 Installation
 ------------
 
-- python
+- python (3.x)
 - one or more midi libraries
-- Qt / PySide
+- Qt / PySide 2
 
 Status
 ------
 
 Curent status can only be descibed as pre-alpha status.
 I don't give a time schedule about how and when it is finished!
+
+Mopho Related Projects
+----------------------
+- [tom-clayton Mopho synth controller](https://github.com/tom-clayton/Synth-Controller "tom-clayton Mopho synth controller")
+- [avolz Midi Mopho](https://github.com/avoltz/midi-mopho "avolz Midi Mopho - Chromebook synth controller")
+- [k-a-r-g Mopho mod](https://github.com/k-a-r-g/Mopho-Morphosis "k-a-r-g Mopho mod")
+- [coffeeshopped mopho-editor](https://github.com/coffeeshopped/mopho-editor "coffeeshopped mopho-editor")
+- [chrismcg Chrazy Mopho Max for Live editor](https://github.com/k-a-r-g/Mopho-Morphosis "chrismcg Chrazy Mopho Max for Live editor")
