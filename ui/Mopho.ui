@@ -6,9 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1207</width>
-    <height>1027</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>10240</width>
+    <height>5760</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>16</width>
+    <height>9</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -30,7 +48,7 @@
     <property name="spacing">
      <number>3</number>
     </property>
-    <item row="1" column="0">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="toolTip">
        <string/>
@@ -40,6 +58,9 @@
       </property>
       <property name="currentIndex">
        <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
       </property>
       <widget class="QWidget" name="TabEditor">
        <property name="toolTip">
@@ -81,9 +102,104 @@
           <property name="spacing">
            <number>3</number>
           </property>
-          <item row="4" column="0">
+          <item row="0" column="2" rowspan="3">
+           <widget class="QGroupBox" name="GB_Prog">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Program</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_42">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gL_Prog">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QLineEdit" name="lineE_ProgProgName"/>
+               </item>
+               <item row="4" column="0">
+                <widget class="QComboBox" name="coB_ProgBankLoc"/>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lab_Prog_ProgType">
+                 <property name="text">
+                  <string>Program Type</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lab_ProgBankLoc">
+                 <property name="text">
+                  <string>Bank Location</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QComboBox" name="coB_ProgProgType"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lab_ProgProgName">
+                 <property name="text">
+                  <string>Program Name</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <spacer name="verticalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="3" column="0">
            <widget class="QGroupBox" name="GB_Lpf">
             <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="baseSize">
              <size>
               <width>0</width>
               <height>0</height>
@@ -114,7 +230,7 @@
                 <number>3</number>
                </property>
                <item row="1" column="1">
-                <widget class="QLabel" name="LRes">
+                <widget class="QLabel" name="lab_LpfRes">
                  <property name="text">
                   <string>Resonance</string>
                  </property>
@@ -124,11 +240,11 @@
                 </widget>
                </item>
                <item row="3" column="3">
-                <widget class="QDial" name="dial_24">
+                <widget class="QDial" name="di_LpfSus">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -140,7 +256,7 @@
                 </widget>
                </item>
                <item row="4" column="3">
-                <widget class="QLabel" name="label_25">
+                <widget class="QLabel" name="lab_LpfSus">
                  <property name="text">
                   <string>Sustain</string>
                  </property>
@@ -150,11 +266,11 @@
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QDial" name="Resonance">
+                <widget class="QDial" name="di_LpfRes">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -175,11 +291,11 @@
                 </widget>
                </item>
                <item row="3" column="0">
-                <widget class="QDial" name="dial_21">
+                <widget class="QDial" name="di_LpfDel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -191,7 +307,7 @@
                 </widget>
                </item>
                <item row="4" column="2">
-                <widget class="QLabel" name="label_24">
+                <widget class="QLabel" name="lab_LpfDec">
                  <property name="text">
                   <string>Decay</string>
                  </property>
@@ -201,7 +317,7 @@
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QLabel" name="label_22">
+                <widget class="QLabel" name="lab_LpfDel">
                  <property name="text">
                   <string>Delay</string>
                  </property>
@@ -211,11 +327,11 @@
                 </widget>
                </item>
                <item row="3" column="4">
-                <widget class="QDial" name="dial_25">
+                <widget class="QDial" name="di_LpfRel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -227,7 +343,7 @@
                 </widget>
                </item>
                <item row="4" column="4">
-                <widget class="QLabel" name="label_26">
+                <widget class="QLabel" name="lab_LpfRel">
                  <property name="text">
                   <string>Release</string>
                  </property>
@@ -237,11 +353,11 @@
                 </widget>
                </item>
                <item row="3" column="2">
-                <widget class="QDial" name="dial_23">
+                <widget class="QDial" name="di_LpfDec">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -253,11 +369,11 @@
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QDial" name="dial_22">
+                <widget class="QDial" name="di_LpfAtt">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -269,7 +385,7 @@
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="LFreq">
+                <widget class="QLabel" name="lab_LpfFreq">
                  <property name="text">
                   <string>Frequency</string>
                  </property>
@@ -279,7 +395,7 @@
                 </widget>
                </item>
                <item row="4" column="1">
-                <widget class="QLabel" name="label_23">
+                <widget class="QLabel" name="lab_LpfAtt">
                  <property name="text">
                   <string>Attack</string>
                  </property>
@@ -289,11 +405,11 @@
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QDial" name="Frequency">
+                <widget class="QDial" name="di_LpfFr">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -314,7 +430,7 @@
                 </widget>
                </item>
                <item row="3" column="5">
-                <widget class="QCheckBox" name="checkBox">
+                <widget class="QCheckBox" name="chB_Lpf4Pole">
                  <property name="layoutDirection">
                   <enum>Qt::LeftToRight</enum>
                  </property>
@@ -324,11 +440,11 @@
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QDial" name="dial_33">
+                <widget class="QDial" name="di_LpfAudioMod">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -340,7 +456,7 @@
                 </widget>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="label_35">
+                <widget class="QLabel" name="lab_LpfAudioMod">
                  <property name="text">
                   <string>Audio Mod</string>
                  </property>
@@ -350,11 +466,11 @@
                 </widget>
                </item>
                <item row="0" column="3">
-                <widget class="QDial" name="Amount">
+                <widget class="QDial" name="di_LpfAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -375,7 +491,7 @@
                 </widget>
                </item>
                <item row="1" column="3">
-                <widget class="QLabel" name="LAmount">
+                <widget class="QLabel" name="lab_LpfAm">
                  <property name="text">
                   <string>Key Amount</string>
                  </property>
@@ -385,11 +501,11 @@
                 </widget>
                </item>
                <item row="0" column="4">
-                <widget class="QDial" name="dial_2">
+                <widget class="QDial" name="di_LpfEnvVel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -404,7 +520,7 @@
                 </widget>
                </item>
                <item row="1" column="4">
-                <widget class="QLabel" name="label_7">
+                <widget class="QLabel" name="lab_LpfEnvVel">
                  <property name="text">
                   <string>EnvVelocity</string>
                  </property>
@@ -414,11 +530,11 @@
                 </widget>
                </item>
                <item row="0" column="5">
-                <widget class="QDial" name="dial_3">
+                <widget class="QDial" name="di_LpfEnvAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -433,7 +549,7 @@
                 </widget>
                </item>
                <item row="1" column="5">
-                <widget class="QLabel" name="label_8">
+                <widget class="QLabel" name="lab_LpfEnvAm">
                  <property name="text">
                   <string>Env Amount</string>
                  </property>
@@ -447,7 +563,7 @@
             </layout>
            </widget>
           </item>
-          <item row="2" column="2">
+          <item row="0" column="4">
            <widget class="QGroupBox" name="GB_Clk">
             <property name="title">
              <string>Clock</string>
@@ -477,8 +593,8 @@
                 <widget class="QDial" name="di_Temp">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -517,7 +633,7 @@
             </layout>
            </widget>
           </item>
-          <item row="2" column="3">
+          <item row="1" column="4">
            <widget class="QGroupBox" name="GB_Appr">
             <property name="title">
              <string>Appregiator</string>
@@ -581,244 +697,8 @@
             </layout>
            </widget>
           </item>
-          <item row="1" column="4" rowspan="2">
-           <widget class="QGroupBox" name="GB_Pi">
-            <property name="title">
-             <string>Push It!</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_18">
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
-             </property>
-             <property name="spacing">
-              <number>3</number>
-             </property>
-             <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Pi">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <item row="5" column="0">
-                <widget class="QLabel" name="lab_PIMode">
-                 <property name="text">
-                  <string>PI Mode</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QDial" name="dial_54">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="lab_PIVel">
-                 <property name="text">
-                  <string>Velocity</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QComboBox" name="comboBox_25"/>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="lab_PINote">
-                 <property name="text">
-                  <string>Note</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QComboBox" name="comboBox_24"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="2" rowspan="2">
-           <widget class="QGroupBox" name="GB_Prog">
-            <property name="title">
-             <string>Program</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_42">
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
-             </property>
-             <property name="spacing">
-              <number>3</number>
-             </property>
-             <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Prog">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <item row="0" column="0">
-                <widget class="QLineEdit" name="lineEdit"/>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="label_95">
-                 <property name="text">
-                  <string>Program Type</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QComboBox" name="comboBox_37"/>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label_94">
-                 <property name="text">
-                  <string>Program Name</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0">
-                <widget class="QLabel" name="label_96">
-                 <property name="text">
-                  <string>Bank Location</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QComboBox" name="comboBox_36"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="3" colspan="2">
-           <widget class="QGroupBox" name="GB_Assi">
-            <property name="title">
-             <string>Assign</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_26">
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
-             </property>
-             <property name="spacing">
-              <number>3</number>
-             </property>
-             <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Assi">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <item row="0" column="1">
-                <widget class="QComboBox" name="coB_AssKn3"/>
-               </item>
-               <item row="3" column="1">
-                <widget class="QLabel" name="lab_AssKn4">
-                 <property name="text">
-                  <string>Knob 4</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="lab_AssKn2">
-                 <property name="text">
-                  <string>Knob 2</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QComboBox" name="coB_AssKn1"/>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="lab_AssKn1">
-                 <property name="text">
-                  <string>Knob 1</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QComboBox" name="coB_AssKn2"/>
-               </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="lab_AssKn3">
-                 <property name="text">
-                  <string>Knob 3</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QComboBox" name="coB_AssKn4"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="8" column="0">
-           <widget class="QGroupBox" name="GB_Env3">
+          <item row="0" column="0" rowspan="3">
+           <widget class="QGroupBox" name="GB_Osc">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -826,33 +706,295 @@
              </size>
             </property>
             <property name="title">
-             <string>Envelope 3</string>
+             <string>Oscillators</string>
             </property>
-            <layout class="QGridLayout" name="gridLayout_8">
+            <layout class="QGridLayout" name="gridLayout_3">
              <property name="leftMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="topMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="rightMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="bottomMargin">
-              <number>6</number>
+              <number>3</number>
              </property>
              <property name="spacing">
               <number>3</number>
              </property>
              <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Env3">
+              <layout class="QGridLayout" name="gL_Osc">
                <property name="spacing">
                 <number>3</number>
                </property>
-               <item row="3" column="3">
-                <widget class="QLabel" name="lab_Env3Sus">
+               <item row="1" column="6">
+                <widget class="QLabel" name="lab_OscGlideMode">
                  <property name="text">
-                  <string>Sustain</string>
+                  <string>Glide mode</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QDial" name="Di_OscFreq1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Oscilator 1 Frequency</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                 <property name="wrapping">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDial" name="Di_OscFine1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QLabel" name="lab_OscShPW2">
+                 <property name="text">
+                  <string>Shape/PW</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="6">
+                <widget class="QLabel" name="lab_OscKeyMode">
+                 <property name="text">
+                  <string>Key Mode</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="5">
+                <widget class="QDial" name="Di_OscPitchWR">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="3">
+                <widget class="QDial" name="Di_OscGlide2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="5">
+                <widget class="QLabel" name="lab_OscPitchWR2">
+                 <property name="text">
+                  <string>range</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="lab_OscFreq2">
+                 <property name="text">
+                  <string>Freq</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="6">
+                <widget class="QComboBox" name="coB_KeyMode"/>
+               </item>
+               <item row="0" column="3">
+                <widget class="QDial" name="Di_OscGlide1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="6">
+                <widget class="QComboBox" name="coB_GlideMode"/>
+               </item>
+               <item row="3" column="0">
+                <widget class="QDial" name="Di_OscFreq2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="lab_OscFine1">
+                 <property name="text">
+                  <string>Fine</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QCheckBox" name="chB_OscSync">
+                 <property name="text">
+                  <string>Sync Osc2-&gt;Osc1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="5">
+                <widget class="Line" name="line">
+                 <property name="lineWidth">
+                  <number>1</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QCheckBox" name="chB_OscKeyboard1">
+                 <property name="text">
+                  <string>Keyboard</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="4">
+                <widget class="QCheckBox" name="chB_OscKeyboard2">
+                 <property name="text">
+                  <string>Keyboard</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QDial" name="Di_OscSlope">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="lab_OscGlide1">
+                 <property name="text">
+                  <string>Glide</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLabel" name="lab_OscSlope">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Osc Slope</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QLabel" name="lab_OscPitchWR1">
+                 <property name="text">
+                  <string>Pitch Wheel</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -860,59 +1002,21 @@
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="lab_Env3Dest">
+                <widget class="QLabel" name="lab_OscFreq1">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Freq</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="2" column="1">
-                <widget class="QDial" name="di_Env3Att">
+               <item row="0" column="2">
+                <widget class="QDial" name="Di_OscShPW1">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="3">
-                <widget class="QDial" name="di_Env3Sus">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="4">
-                <widget class="QDial" name="di_Env3Rel">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -927,51 +1031,145 @@
                 </widget>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="lab_Env3Vel">
+                <widget class="QLabel" name="lab_OscShPW1">
                  <property name="text">
-                  <string>Velocity</string>
+                  <string>Shape/PW</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>lab_OscShPW1</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLabel" name="lab_OscFine2">
+                 <property name="text">
+                  <string>Fine</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QDial" name="Di_OscShPW2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QLabel" name="lab_Env3Dec">
+                <widget class="QDial" name="Di_OscFine2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="lab_OscGlide2">
                  <property name="text">
-                  <string>Attack</string>
+                  <string>Glide</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="3" column="4">
-                <widget class="QLabel" name="lab_Env3Rel">
-                 <property name="text">
-                  <string>Release</string>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1" rowspan="2">
+           <widget class="QGroupBox" name="GB_Mix">
+            <property name="title">
+             <string>Mixer</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_21">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gL_Mix">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item row="2" column="1">
+                <widget class="QDial" name="di_MixNoise">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
                  </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="lab_Env3Am">
-                 <property name="text">
-                  <string>Amount</string>
+               <item row="0" column="2">
+                <widget class="QDial" name="di_MixExtV">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
                  </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QDial" name="di_Env3Am">
+                <widget class="QDial" name="di_MixMix">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -986,11 +1184,11 @@
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QDial" name="di_Env3Del">
+                <widget class="QDial" name="di_MixSOsc2">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -999,15 +1197,52 @@
                    <height>500</height>
                   </size>
                  </property>
-                 <property name="maximum">
-                  <number>127</number>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="lab_MixMix">
+                 <property name="text">
+                  <string>Mix</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="lab_MixNoise">
+                 <property name="text">
+                  <string>Noise</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="lab_MixExtV">
+                 <property name="text">
+                  <string>Ext Vol.</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0">
-                <widget class="QLabel" name="lab_Env3Att">
+                <widget class="QLabel" name="lab_MixSOsc2">
                  <property name="text">
-                  <string>Delay</string>
+                  <string>SubOsc2</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lab_MixSOsc1">
+                 <property name="text">
+                  <string>SubOsc1</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1015,22 +1250,71 @@
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="comboBox"/>
-               </item>
-               <item row="2" column="5">
-                <widget class="QCheckBox" name="checkBox_5">
-                 <property name="text">
-                  <string>Repeat
-mode</string>
+                <widget class="QDial" name="di_MixSOsc1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
-                <widget class="QDial" name="di_Env3Vel">
+               <item row="4" column="0">
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="3" column="1" rowspan="2" colspan="5">
+           <widget class="QGroupBox" name="GB_Lfo">
+            <property name="title">
+             <string>Low Frequency Oscilator</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_15">
+             <property name="leftMargin">
+              <number>6</number>
+             </property>
+             <property name="topMargin">
+              <number>6</number>
+             </property>
+             <property name="rightMargin">
+              <number>6</number>
+             </property>
+             <property name="bottomMargin">
+              <number>6</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="1">
+              <layout class="QGridLayout" name="gL_Lfo">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item row="0" column="1">
+                <widget class="QDial" name="di_LfoA1">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1044,22 +1328,41 @@ mode</string>
                  </property>
                 </widget>
                </item>
-               <item row="3" column="2">
-                <widget class="QLabel" name="lab_Env3Dec">
+               <item row="0" column="3">
+                <widget class="QDial" name="di_LfoA2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" colspan="2">
+                <widget class="QLabel" name="lab_LfoD1">
                  <property name="text">
-                  <string>Decay</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="2" column="2">
-                <widget class="QDial" name="di_Env3Att">
+               <item row="0" column="4">
+                <widget class="QDial" name="di_LfoF3">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1070,6 +1373,303 @@ mode</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="2">
+                <widget class="QCheckBox" name="chB_LfoKeyS1">
+                 <property name="text">
+                  <string>Key Sync</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4">
+                <widget class="QLabel" name="lab_LfoF3">
+                 <property name="text">
+                  <string>Frequency</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QDial" name="di_LfoA3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" colspan="2">
+                <widget class="QComboBox" name="coB_LfoS1"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lab_LfoF1">
+                 <property name="text">
+                  <string>Frequency</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0" colspan="2">
+                <widget class="QLabel" name="lab_LfoS1">
+                 <property name="text">
+                  <string>Shape</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QDial" name="di_LfoF1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="lab_LfoA1">
+                 <property name="text">
+                  <string>Amount</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="6">
+                <widget class="QDial" name="di_LfoF4">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QDial" name="di_LfoF2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="lab_LfoA2">
+                 <property name="text">
+                  <string>Amount</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="lab_LfoF2">
+                 <property name="text">
+                  <string>Frequency</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QComboBox" name="coB_LfoD1"/>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLabel" name="lab_LfoA3">
+                 <property name="text">
+                  <string>Amount</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="7">
+                <widget class="QDial" name="di_LfoA4">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6">
+                <widget class="QLabel" name="lab_LfoF4">
+                 <property name="text">
+                  <string>Frequency</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="7">
+                <widget class="QLabel" name="lab_LfoA4">
+                 <property name="text">
+                  <string>Amount</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2" colspan="2">
+                <widget class="QCheckBox" name="chB_LfoKeyS2">
+                 <property name="text">
+                  <string>Key Sync</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4" colspan="2">
+                <widget class="QCheckBox" name="chB_LfoKeyS3">
+                 <property name="text">
+                  <string>Key Sync</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="6" colspan="2">
+                <widget class="QCheckBox" name="chB_LfoKeyS4">
+                 <property name="text">
+                  <string>Key Sync</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="6" colspan="2">
+                <widget class="QComboBox" name="coB_LfoS4"/>
+               </item>
+               <item row="5" column="6" colspan="2">
+                <widget class="QComboBox" name="coB_LfoD4"/>
+               </item>
+               <item row="5" column="4" colspan="2">
+                <widget class="QComboBox" name="coB_LfoD3"/>
+               </item>
+               <item row="3" column="4" colspan="2">
+                <widget class="QComboBox" name="coB_LfoS3"/>
+               </item>
+               <item row="3" column="2" colspan="2">
+                <widget class="QComboBox" name="coB_LfoS2"/>
+               </item>
+               <item row="5" column="2" colspan="2">
+                <widget class="QComboBox" name="coB_LfoD2"/>
+               </item>
+               <item row="4" column="2" colspan="2">
+                <widget class="QLabel" name="lab_LfoS2">
+                 <property name="text">
+                  <string>Shape</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="2" colspan="2">
+                <widget class="QLabel" name="lab_LfoD2">
+                 <property name="text">
+                  <string>Destination</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4" colspan="2">
+                <widget class="QLabel" name="lab_LfoS3">
+                 <property name="text">
+                  <string>Shape</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="4" colspan="2">
+                <widget class="QLabel" name="lab_LfoD3">
+                 <property name="text">
+                  <string>Destination</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="6" colspan="2">
+                <widget class="QLabel" name="lab_LfoS4">
+                 <property name="text">
+                  <string>Shape</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="6" colspan="2">
+                <widget class="QLabel" name="lab_LfoD4">
+                 <property name="text">
+                  <string>Destination</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -1078,7 +1678,7 @@ mode</string>
             </layout>
            </widget>
           </item>
-          <item row="5" column="0" rowspan="3">
+          <item row="4" column="0" rowspan="2">
            <widget class="QGroupBox" name="GB_Amp">
             <property name="minimumSize">
              <size>
@@ -1086,8 +1686,14 @@ mode</string>
               <height>0</height>
              </size>
             </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>160</height>
+             </size>
+            </property>
             <property name="title">
-             <string>Amp</string>
+             <string>Amplifier</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_6">
              <property name="leftMargin">
@@ -1164,8 +1770,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpSus">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1183,8 +1789,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpDec">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1202,8 +1808,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpVol">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1221,8 +1827,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpDel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1240,8 +1846,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpRel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1269,8 +1875,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpAtt">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1288,8 +1894,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpVca">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1307,8 +1913,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1356,8 +1962,8 @@ mode</string>
                 <widget class="QDial" name="di_AmpVel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1376,7 +1982,7 @@ mode</string>
             </layout>
            </widget>
           </item>
-          <item row="6" column="1" rowspan="3" colspan="5">
+          <item row="5" column="1" rowspan="2" colspan="5">
            <widget class="QGroupBox" name="GB_Mod">
             <property name="title">
              <string>Modulators</string>
@@ -1403,7 +2009,7 @@ mode</string>
                 <number>3</number>
                </property>
                <item row="1" column="2">
-                <widget class="QLabel" name="label_70">
+                <widget class="QLabel" name="lab_ModSource3">
                  <property name="text">
                   <string>Source</string>
                  </property>
@@ -1413,11 +2019,11 @@ mode</string>
                 </widget>
                </item>
                <item row="2" column="3">
-                <widget class="QDial" name="dial_53">
+                <widget class="QDial" name="di_ModSourceAm4">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1429,7 +2035,7 @@ mode</string>
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="label_67">
+                <widget class="QLabel" name="lab_ModSource1">
                  <property name="text">
                   <string>Source</string>
                  </property>
@@ -1439,20 +2045,20 @@ mode</string>
                 </widget>
                </item>
                <item row="4" column="3">
-                <widget class="QComboBox" name="comboBox_23"/>
+                <widget class="QComboBox" name="coB_ModSourceDest4"/>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="comboBox_16"/>
+                <widget class="QComboBox" name="coB_ModSource1"/>
                </item>
                <item row="0" column="1">
-                <widget class="QComboBox" name="comboBox_18"/>
+                <widget class="QComboBox" name="coB_ModSource2"/>
                </item>
                <item row="2" column="1">
-                <widget class="QDial" name="dial_51">
+                <widget class="QDial" name="di_ModSourceAm2">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1464,9 +2070,9 @@ mode</string>
                 </widget>
                </item>
                <item row="5" column="2">
-                <widget class="QLabel" name="label_73">
+                <widget class="QLabel" name="lab_ModSourceDest3">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1474,9 +2080,9 @@ mode</string>
                 </widget>
                </item>
                <item row="5" column="0">
-                <widget class="QLabel" name="label_68">
+                <widget class="QLabel" name="lab_ModSourceDest1">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1484,11 +2090,11 @@ mode</string>
                 </widget>
                </item>
                <item row="2" column="2">
-                <widget class="QDial" name="dial_52">
+                <widget class="QDial" name="di_ModSourceAm3">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1500,7 +2106,7 @@ mode</string>
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QLabel" name="label_69">
+                <widget class="QLabel" name="lab_ModSource2">
                  <property name="text">
                   <string>Source</string>
                  </property>
@@ -1510,11 +2116,11 @@ mode</string>
                 </widget>
                </item>
                <item row="7" column="3">
-                <widget class="QDial" name="dial_49">
+                <widget class="QDial" name="di_ModVelocAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1539,13 +2145,13 @@ mode</string>
                 </spacer>
                </item>
                <item row="0" column="3">
-                <widget class="QComboBox" name="comboBox_20"/>
+                <widget class="QComboBox" name="coB_ModSource4"/>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="comboBox_17"/>
+                <widget class="QComboBox" name="coB_ModSourceDest1"/>
                </item>
                <item row="3" column="2">
-                <widget class="QLabel" name="label_76">
+                <widget class="QLabel" name="lab_ModSourceAm3">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -1555,9 +2161,9 @@ mode</string>
                 </widget>
                </item>
                <item row="5" column="3">
-                <widget class="QLabel" name="label_74">
+                <widget class="QLabel" name="lab_ModSourceDest4">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1565,7 +2171,7 @@ mode</string>
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QLabel" name="label_75">
+                <widget class="QLabel" name="lab_ModSourceAm2">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -1575,11 +2181,11 @@ mode</string>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QDial" name="dial_50">
+                <widget class="QDial" name="di_ModSourceAm1">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1591,15 +2197,15 @@ mode</string>
                 </widget>
                </item>
                <item row="9" column="4">
-                <widget class="QComboBox" name="comboBox_38"/>
+                <widget class="QComboBox" name="coB_ModFootDest"/>
                </item>
                <item row="9" column="3">
-                <widget class="QComboBox" name="comboBox_15"/>
+                <widget class="QComboBox" name="coB_ModVelocDest"/>
                </item>
                <item row="5" column="1">
-                <widget class="QLabel" name="label_72">
+                <widget class="QLabel" name="lab_ModSourceDest2">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1607,7 +2213,7 @@ mode</string>
                 </widget>
                </item>
                <item row="8" column="1">
-                <widget class="QLabel" name="label_60">
+                <widget class="QLabel" name="lab_ModPressAm">
                  <property name="text">
                   <string>Press Am</string>
                  </property>
@@ -1617,7 +2223,7 @@ mode</string>
                 </widget>
                </item>
                <item row="8" column="0">
-                <widget class="QLabel" name="label_58">
+                <widget class="QLabel" name="lab_ModModWheelAm">
                  <property name="text">
                   <string>ModWheel A</string>
                  </property>
@@ -1627,13 +2233,20 @@ mode</string>
                 </widget>
                </item>
                <item row="4" column="2">
-                <widget class="QComboBox" name="comboBox_22"/>
+                <widget class="QComboBox" name="coB_ModSourceDest3"/>
                </item>
                <item row="7" column="4">
-                <widget class="QDial" name="dial_56"/>
+                <widget class="QDial" name="di_ModFootAm">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
                <item row="8" column="2">
-                <widget class="QLabel" name="label_64">
+                <widget class="QLabel" name="lab_ModBreathAm">
                  <property name="text">
                   <string>Breath Am</string>
                  </property>
@@ -1643,14 +2256,14 @@ mode</string>
                 </widget>
                </item>
                <item row="9" column="0">
-                <widget class="QComboBox" name="comboBox_12"/>
+                <widget class="QComboBox" name="coB_ModModWheelDest"/>
                </item>
                <item row="7" column="1">
-                <widget class="QDial" name="dial_48">
+                <widget class="QDial" name="di_ModPressAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1662,7 +2275,7 @@ mode</string>
                 </widget>
                </item>
                <item row="3" column="0">
-                <widget class="QLabel" name="label_66">
+                <widget class="QLabel" name="lab_ModSourceAm1">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -1672,7 +2285,7 @@ mode</string>
                 </widget>
                </item>
                <item row="8" column="3">
-                <widget class="QLabel" name="label_65">
+                <widget class="QLabel" name="lab_ModVelocAm">
                  <property name="text">
                   <string>Veloc Am</string>
                  </property>
@@ -1682,11 +2295,11 @@ mode</string>
                 </widget>
                </item>
                <item row="7" column="2">
-                <widget class="QDial" name="dial_47">
+                <widget class="QDial" name="di_ModBreathAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1698,7 +2311,7 @@ mode</string>
                 </widget>
                </item>
                <item row="8" column="4">
-                <widget class="QLabel" name="label_78">
+                <widget class="QLabel" name="lab_ModFootAm">
                  <property name="text">
                   <string>Foot Am</string>
                  </property>
@@ -1708,13 +2321,13 @@ mode</string>
                 </widget>
                </item>
                <item row="9" column="2">
-                <widget class="QComboBox" name="comboBox_14"/>
+                <widget class="QComboBox" name="coB_ModBreathDest"/>
                </item>
                <item row="4" column="1">
-                <widget class="QComboBox" name="comboBox_21"/>
+                <widget class="QComboBox" name="coB_ModSourceDest2"/>
                </item>
                <item row="1" column="3">
-                <widget class="QLabel" name="label_71">
+                <widget class="QLabel" name="lab_ModSource4">
                  <property name="text">
                   <string>Source</string>
                  </property>
@@ -1724,14 +2337,14 @@ mode</string>
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QComboBox" name="comboBox_19"/>
+                <widget class="QComboBox" name="coB_ModSource3"/>
                </item>
                <item row="7" column="0">
-                <widget class="QDial" name="dial_46">
+                <widget class="QDial" name="di_ModModWheelAm">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -1743,10 +2356,10 @@ mode</string>
                 </widget>
                </item>
                <item row="9" column="1">
-                <widget class="QComboBox" name="comboBox_13"/>
+                <widget class="QComboBox" name="coB_ModPressDest"/>
                </item>
                <item row="3" column="3">
-                <widget class="QLabel" name="label_77">
+                <widget class="QLabel" name="lab_ModSourceAm4">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -1756,7 +2369,7 @@ mode</string>
                 </widget>
                </item>
                <item row="10" column="0">
-                <widget class="QLabel" name="label_59">
+                <widget class="QLabel" name="lab_ModModWheelDest">
                  <property name="text">
                   <string>Mod Wheel Dest</string>
                  </property>
@@ -1766,7 +2379,7 @@ mode</string>
                 </widget>
                </item>
                <item row="10" column="1">
-                <widget class="QLabel" name="label_61">
+                <widget class="QLabel" name="lab_ModPressDest">
                  <property name="text">
                   <string>Press Dest</string>
                  </property>
@@ -1776,7 +2389,7 @@ mode</string>
                 </widget>
                </item>
                <item row="10" column="2">
-                <widget class="QLabel" name="label_62">
+                <widget class="QLabel" name="lab_ModBreathDest">
                  <property name="text">
                   <string>Breath Dest</string>
                  </property>
@@ -1786,7 +2399,7 @@ mode</string>
                 </widget>
                </item>
                <item row="10" column="3">
-                <widget class="QLabel" name="label_63">
+                <widget class="QLabel" name="lab_ModVelocDest">
                  <property name="text">
                   <string>Veloc Dest</string>
                  </property>
@@ -1796,7 +2409,7 @@ mode</string>
                 </widget>
                </item>
                <item row="10" column="4">
-                <widget class="QLabel" name="label_79">
+                <widget class="QLabel" name="lab_ModFootDest">
                  <property name="text">
                   <string>Foot Dest</string>
                  </property>
@@ -1810,706 +2423,48 @@ mode</string>
             </layout>
            </widget>
           </item>
-          <item row="4" column="1" rowspan="2" colspan="5">
-           <widget class="QGroupBox" name="GB_Lfo">
-            <property name="title">
-             <string>Lfo</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_15">
-             <property name="leftMargin">
-              <number>6</number>
-             </property>
-             <property name="topMargin">
-              <number>6</number>
-             </property>
-             <property name="rightMargin">
-              <number>6</number>
-             </property>
-             <property name="bottomMargin">
-              <number>6</number>
-             </property>
-             <property name="spacing">
-              <number>3</number>
-             </property>
-             <item row="0" column="1">
-              <layout class="QGridLayout" name="gL_Lfo">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <item row="0" column="1">
-                <widget class="QDial" name="dial_39">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="3">
-                <widget class="QDial" name="dial_41">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="0" colspan="2">
-                <widget class="QLabel" name="label_44">
-                 <property name="text">
-                  <string>Destenation</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="4">
-                <widget class="QDial" name="dial_42">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0" colspan="2">
-                <widget class="QCheckBox" name="checkBox_8">
-                 <property name="text">
-                  <string>Key Sync</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="4">
-                <widget class="QLabel" name="label_48">
-                 <property name="text">
-                  <string>Frequency</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="5">
-                <widget class="QDial" name="dial_43">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0" colspan="2">
-                <widget class="QComboBox" name="comboBox_4"/>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label_42">
-                 <property name="text">
-                  <string>Frequency</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0" colspan="2">
-                <widget class="QLabel" name="label_43">
-                 <property name="text">
-                  <string>Shape</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QDial" name="dial_38">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="label_45">
-                 <property name="text">
-                  <string>Amount</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="6">
-                <widget class="QDial" name="dial_44">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QDial" name="dial_40">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="3">
-                <widget class="QLabel" name="label_47">
-                 <property name="text">
-                  <string>Amount</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="2">
-                <widget class="QLabel" name="label_46">
-                 <property name="text">
-                  <string>Frequency</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0" colspan="2">
-                <widget class="QComboBox" name="comboBox_5"/>
-               </item>
-               <item row="1" column="5">
-                <widget class="QLabel" name="label_49">
-                 <property name="text">
-                  <string>Amount</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="7">
-                <widget class="QDial" name="dial_45">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="6">
-                <widget class="QLabel" name="label_50">
-                 <property name="text">
-                  <string>Frequency</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="7">
-                <widget class="QLabel" name="label_51">
-                 <property name="text">
-                  <string>Amount</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="2" colspan="2">
-                <widget class="QCheckBox" name="checkBox_9">
-                 <property name="text">
-                  <string>Key Sync</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="4" colspan="2">
-                <widget class="QCheckBox" name="checkBox_10">
-                 <property name="text">
-                  <string>Key Sync</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="6" colspan="2">
-                <widget class="QCheckBox" name="checkBox_11">
-                 <property name="text">
-                  <string>Key Sync</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="6" colspan="2">
-                <widget class="QComboBox" name="comboBox_10"/>
-               </item>
-               <item row="5" column="6" colspan="2">
-                <widget class="QComboBox" name="comboBox_11"/>
-               </item>
-               <item row="5" column="4" colspan="2">
-                <widget class="QComboBox" name="comboBox_9"/>
-               </item>
-               <item row="3" column="4" colspan="2">
-                <widget class="QComboBox" name="comboBox_8"/>
-               </item>
-               <item row="3" column="2" colspan="2">
-                <widget class="QComboBox" name="comboBox_6"/>
-               </item>
-               <item row="5" column="2" colspan="2">
-                <widget class="QComboBox" name="comboBox_7"/>
-               </item>
-               <item row="4" column="2" colspan="2">
-                <widget class="QLabel" name="label_52">
-                 <property name="text">
-                  <string>Shape</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="2" colspan="2">
-                <widget class="QLabel" name="label_53">
-                 <property name="text">
-                  <string>Destenation</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="4" colspan="2">
-                <widget class="QLabel" name="label_54">
-                 <property name="text">
-                  <string>Shape</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="4" colspan="2">
-                <widget class="QLabel" name="label_55">
-                 <property name="text">
-                  <string>Destenation</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="6" colspan="2">
-                <widget class="QLabel" name="label_56">
-                 <property name="text">
-                  <string>Shape</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="6" colspan="2">
-                <widget class="QLabel" name="label_57">
-                 <property name="text">
-                  <string>Destenation</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="0" rowspan="4">
-           <widget class="QGroupBox" name="GB_Osc">
+          <item row="6" column="0">
+           <widget class="QGroupBox" name="GB_Env3">
             <property name="minimumSize">
              <size>
               <width>0</width>
               <height>0</height>
              </size>
             </property>
-            <property name="title">
-             <string>Oscillators</string>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>160</height>
+             </size>
             </property>
-            <layout class="QGridLayout" name="gridLayout_3">
+            <property name="title">
+             <string>Envelope 3</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_8">
              <property name="leftMargin">
-              <number>3</number>
+              <number>6</number>
              </property>
              <property name="topMargin">
-              <number>3</number>
+              <number>6</number>
              </property>
              <property name="rightMargin">
-              <number>3</number>
+              <number>6</number>
              </property>
              <property name="bottomMargin">
-              <number>3</number>
+              <number>6</number>
              </property>
              <property name="spacing">
               <number>3</number>
              </property>
              <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Osc">
+              <layout class="QGridLayout" name="gL_Env3">
                <property name="spacing">
                 <number>3</number>
                </property>
-               <item row="1" column="6">
-                <widget class="QLabel" name="label_40">
-                 <property name="text">
-                  <string>Glide mode</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QDial" name="Osc1_Freq">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="toolTip">
-                  <string>Oscilator 1 Frequency</string>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                 <property name="wrapping">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="2" colspan="2">
-                <widget class="QCheckBox" name="checkBox_7">
-                 <property name="text">
-                  <string>Adj Osc 1+2</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QDial" name="dial">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="2">
-                <widget class="QLabel" name="label_11">
-                 <property name="text">
-                  <string>Shape/PW</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="6">
-                <widget class="QLabel" name="label_41">
-                 <property name="text">
-                  <string>Key Mode</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="5">
-                <widget class="QDial" name="dial_55">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
                <item row="3" column="3">
-                <widget class="QDial" name="dial_12">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="5">
-                <widget class="QLabel" name="label_82">
+                <widget class="QLabel" name="lab_Env3Sus">
                  <property name="text">
-                  <string>range</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QLabel" name="label_9">
-                 <property name="text">
-                  <string>Freq</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="6">
-                <widget class="QComboBox" name="comboBox_3"/>
-               </item>
-               <item row="0" column="3">
-                <widget class="QDial" name="dial_11">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="6">
-                <widget class="QComboBox" name="comboBox_2"/>
-               </item>
-               <item row="3" column="0">
-                <widget class="QDial" name="dial_8">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>Fine</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0" colspan="2">
-                <widget class="QCheckBox" name="checkBox_6">
-                 <property name="text">
-                  <string>Sync Osc2-&gt;Osac1</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0" colspan="5">
-                <widget class="Line" name="line">
-                 <property name="lineWidth">
-                  <number>1</number>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="4">
-                <widget class="QCheckBox" name="checkBox_3">
-                 <property name="text">
-                  <string>Keyboard</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="4">
-                <widget class="QCheckBox" name="checkBox_4">
-                 <property name="text">
-                  <string>Keyboard</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="5">
-                <widget class="QDial" name="dial_34">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="3">
-                <widget class="QLabel" name="label_12">
-                 <property name="text">
-                  <string>Glide</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="5">
-                <widget class="QLabel" name="label_36">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Osc Slope</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="5">
-                <widget class="QLabel" name="label_81">
-                 <property name="text">
-                  <string>Pitch Wheel</string>
+                  <string>Sustain</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2517,21 +2472,59 @@ mode</string>
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="label_4">
+                <widget class="QLabel" name="lab_Env3Dest">
                  <property name="text">
-                  <string>Freq</string>
+                  <string>Destenation</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
-                <widget class="QDial" name="dial_7">
+               <item row="2" column="1">
+                <widget class="QDial" name="di_Env3Att">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="3">
+                <widget class="QDial" name="di_Env3Sus">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4">
+                <widget class="QDial" name="di_Env3Rel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -2546,145 +2539,51 @@ mode</string>
                 </widget>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="label_6">
+                <widget class="QLabel" name="lab_Env3Vel">
                  <property name="text">
-                  <string>Shape/PW</string>
+                  <string>Velocity</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="buddy">
-                  <cstring>label_6</cstring>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="1">
-                <widget class="QLabel" name="label_10">
-                 <property name="text">
-                  <string>Fine</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="2">
-                <widget class="QDial" name="dial_10">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QDial" name="dial_9">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="3">
-                <widget class="QLabel" name="label_13">
+                <widget class="QLabel" name="lab_Env3Dec">
                  <property name="text">
-                  <string>Glide</string>
+                  <string>Attack</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="1" rowspan="4">
-           <widget class="QGroupBox" name="GB_Mix">
-            <property name="title">
-             <string>Mixer</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_21">
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
-             </property>
-             <property name="spacing">
-              <number>3</number>
-             </property>
-             <item row="0" column="0">
-              <layout class="QGridLayout" name="gL_Mix">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <item row="2" column="1">
-                <widget class="QDial" name="dial_14">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
+               <item row="3" column="4">
+                <widget class="QLabel" name="lab_Env3Rel">
+                 <property name="text">
+                  <string>Release</string>
                  </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
-                 </property>
-                 <property name="maximum">
-                  <number>127</number>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
-                <widget class="QDial" name="dial_37">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
+               <item row="1" column="1">
+                <widget class="QLabel" name="lab_Env3Am">
+                 <property name="text">
+                  <string>Amount</string>
                  </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>500</width>
-                   <height>500</height>
-                  </size>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QDial" name="dial_13">
+                <widget class="QDial" name="di_Env3Am">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -2699,11 +2598,11 @@ mode</string>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QDial" name="dial_35">
+                <widget class="QDial" name="di_Env3Del">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -2712,52 +2611,15 @@ mode</string>
                    <height>500</height>
                   </size>
                  </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="label_14">
-                 <property name="text">
-                  <string>Mix</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QLabel" name="label_15">
-                 <property name="text">
-                  <string>Noise</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="2">
-                <widget class="QLabel" name="label_39">
-                 <property name="text">
-                  <string>Ext Vol.</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0">
-                <widget class="QLabel" name="label_37">
+                <widget class="QLabel" name="lab_Env3Att">
                  <property name="text">
-                  <string>SubOsc2</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label_38">
-                 <property name="text">
-                  <string>SubOsc1</string>
+                  <string>Delay</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2765,11 +2627,127 @@ mode</string>
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QDial" name="dial_36">
+                <widget class="QComboBox" name="coB_Env3Dest"/>
+               </item>
+               <item row="2" column="5">
+                <widget class="QCheckBox" name="chB_Env3RepM">
+                 <property name="text">
+                  <string>Repeat
+mode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QDial" name="di_Env3Vel">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QLabel" name="lab_Env3Dec">
+                 <property name="text">
+                  <string>Decay</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QDial" name="di_Env3Att">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="5" rowspan="2">
+           <widget class="QGroupBox" name="GB_Pi">
+            <property name="title">
+             <string>Push It!</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_18">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gL_Pi">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lab_PINote">
+                 <property name="text">
+                  <string>Note</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QComboBox" name="coB_PiNote"/>
+               </item>
+               <item row="4" column="0">
+                <widget class="QComboBox" name="coB_PiPiMode"/>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lab_PIMode">
+                 <property name="text">
+                  <string>PI Mode</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QDial" name="di_PiVel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -2780,8 +2758,18 @@ mode</string>
                  </property>
                 </widget>
                </item>
-               <item row="4" column="0">
-                <spacer name="verticalSpacer_7">
+               <item row="3" column="0">
+                <widget class="QLabel" name="lab_PIVel">
+                 <property name="text">
+                  <string>Velocity</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <spacer name="verticalSpacer_9">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2792,6 +2780,95 @@ mode</string>
                   </size>
                  </property>
                 </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="3" rowspan="2">
+           <widget class="QGroupBox" name="GB_Assi">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Assign</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_26">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="spacing">
+              <number>3</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gL_Assi">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item row="5" column="0">
+                <widget class="QLabel" name="lab_AssKn3">
+                 <property name="text">
+                  <string>Knob 3</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="lab_AssKn4">
+                 <property name="text">
+                  <string>Knob 4</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QComboBox" name="coB_AssKn2"/>
+               </item>
+               <item row="0" column="0">
+                <widget class="QComboBox" name="coB_AssKn1"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QComboBox" name="coB_AssKn4"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="lab_AssKn1">
+                 <property name="text">
+                  <string>Knob 1</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="lab_AssKn2">
+                 <property name="text">
+                  <string>Knob 2</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QComboBox" name="coB_AssKn3"/>
                </item>
               </layout>
              </item>
@@ -2811,7 +2888,7 @@ mode</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_29">
         <item row="0" column="0">
-         <layout class="QGridLayout" name="gridLayout_28" columnminimumwidth="0,0">
+         <layout class="QGridLayout" name="SequencerLayout" columnminimumwidth="0,0">
           <item row="0" column="0">
            <widget class="QGroupBox" name="groupBox_7">
             <property name="sizePolicy">
@@ -2876,6 +2953,9 @@ mode</string>
                </item>
                <item row="0" column="1" rowspan="3">
                 <widget class="QSlider" name="verticalSlider">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2883,6 +2963,9 @@ mode</string>
                </item>
                <item row="0" column="2" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_2">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2890,6 +2973,9 @@ mode</string>
                </item>
                <item row="0" column="3" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_4">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2897,6 +2983,9 @@ mode</string>
                </item>
                <item row="0" column="4" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_3">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2904,6 +2993,9 @@ mode</string>
                </item>
                <item row="0" column="6" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_6">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2911,6 +3003,9 @@ mode</string>
                </item>
                <item row="0" column="5" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_5">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2918,6 +3013,9 @@ mode</string>
                </item>
                <item row="0" column="7" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_7">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2925,6 +3023,9 @@ mode</string>
                </item>
                <item row="0" column="8" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_8">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2932,6 +3033,9 @@ mode</string>
                </item>
                <item row="0" column="9" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_9">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2939,6 +3043,9 @@ mode</string>
                </item>
                <item row="0" column="10" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_10">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2946,6 +3053,9 @@ mode</string>
                </item>
                <item row="0" column="11" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_11">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2953,6 +3063,9 @@ mode</string>
                </item>
                <item row="0" column="12" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_12">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2960,6 +3073,9 @@ mode</string>
                </item>
                <item row="0" column="13" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_13">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2967,6 +3083,9 @@ mode</string>
                </item>
                <item row="0" column="14" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_14">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2974,6 +3093,9 @@ mode</string>
                </item>
                <item row="0" column="15" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_15">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -2981,6 +3103,9 @@ mode</string>
                </item>
                <item row="0" column="16" rowspan="3">
                 <widget class="QSlider" name="verticalSlider_16">
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -3167,13 +3292,33 @@ mode</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="TabGlobal">
+      <widget class="QWidget" name="TabSettings">
        <property name="toolTip">
         <string>Global Tab</string>
        </property>
        <attribute name="title">
-        <string>Global</string>
+        <string>Settings</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="SettingsLayout">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>Midi Settings</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Global Settings</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -3184,7 +3329,7 @@ mode</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1207</width>
+     <width>1280</width>
      <height>22</height>
     </rect>
    </property>
@@ -3192,10 +3337,92 @@ mode</string>
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew_Program"/>
+    <addaction name="actionOpen_Program"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose_App"/>
+   </widget>
+   <widget class="QMenu" name="menuMidi">
+    <property name="title">
+     <string>Midi</string>
+    </property>
+    <addaction name="actionReceive_Program"/>
+    <addaction name="actionTransmit_Program"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy_Program"/>
+    <addaction name="actionPaste_Program"/>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuMidi"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_Program">
+   <property name="text">
+    <string>New Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen_Program">
+   <property name="text">
+    <string>Open Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionReceive_Program">
+   <property name="text">
+    <string>Receive Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionTransmit_Program">
+   <property name="text">
+    <string>Transmit Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionCopy_Program">
+   <property name="text">
+    <string>Copy Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste_Program">
+   <property name="text">
+    <string>Paste Program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionClose_App">
+   <property name="text">
+    <string>Close App</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>...</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
