@@ -29,7 +29,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>DSI Mopho Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>logos/O_logo-32x32.png</normaloff>logos/O_logo-32x32.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -3335,7 +3339,7 @@ mode</string>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>&amp;File</string>
     </property>
     <addaction name="actionNew_Program"/>
     <addaction name="actionOpen_Program"/>
@@ -3345,14 +3349,14 @@ mode</string>
    </widget>
    <widget class="QMenu" name="menuMidi">
     <property name="title">
-     <string>Midi</string>
+     <string>&amp;Midi</string>
     </property>
     <addaction name="actionReceive_Program"/>
     <addaction name="actionTransmit_Program"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
-     <string>Edit</string>
+     <string>&amp;Edit</string>
     </property>
     <addaction name="actionCopy_Program"/>
     <addaction name="actionPaste_Program"/>
@@ -3364,7 +3368,7 @@ mode</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew_Program">
    <property name="text">
-    <string>New Program</string>
+    <string>&amp;New Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -3372,7 +3376,7 @@ mode</string>
   </action>
   <action name="actionOpen_Program">
    <property name="text">
-    <string>Open Program</string>
+    <string>&amp;Open Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -3380,7 +3384,7 @@ mode</string>
   </action>
   <action name="actionReceive_Program">
    <property name="text">
-    <string>Receive Program</string>
+    <string>&amp;Receive Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+R</string>
@@ -3388,7 +3392,7 @@ mode</string>
   </action>
   <action name="actionTransmit_Program">
    <property name="text">
-    <string>Transmit Program</string>
+    <string>&amp;Transmit Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+T</string>
@@ -3396,7 +3400,7 @@ mode</string>
   </action>
   <action name="actionCopy_Program">
    <property name="text">
-    <string>Copy Program</string>
+    <string>&amp;Copy Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
@@ -3404,7 +3408,7 @@ mode</string>
   </action>
   <action name="actionPaste_Program">
    <property name="text">
-    <string>Paste Program</string>
+    <string>&amp;Paste Program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
@@ -3412,10 +3416,10 @@ mode</string>
   </action>
   <action name="actionClose_App">
    <property name="text">
-    <string>Close App</string>
+    <string>&amp;Close App</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+W</string>
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="action_2">
@@ -3424,6 +3428,136 @@ mode</string>
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineE_ProgProgName</tabstop>
+  <tabstop>coB_ProgProgType</tabstop>
+  <tabstop>coB_ProgBankLoc</tabstop>
+  <tabstop>Di_OscFreq1</tabstop>
+  <tabstop>Di_OscFine1</tabstop>
+  <tabstop>Di_OscShPW1</tabstop>
+  <tabstop>Di_OscGlide1</tabstop>
+  <tabstop>chB_OscKeyboard1</tabstop>
+  <tabstop>Di_OscFreq2</tabstop>
+  <tabstop>Di_OscFine2</tabstop>
+  <tabstop>Di_OscShPW2</tabstop>
+  <tabstop>Di_OscGlide2</tabstop>
+  <tabstop>chB_OscKeyboard2</tabstop>
+  <tabstop>Di_OscSlope</tabstop>
+  <tabstop>coB_GlideMode</tabstop>
+  <tabstop>Di_OscPitchWR</tabstop>
+  <tabstop>coB_KeyMode</tabstop>
+  <tabstop>chB_OscSync</tabstop>
+  <tabstop>di_MixSOsc1</tabstop>
+  <tabstop>di_MixSOsc2</tabstop>
+  <tabstop>di_MixMix</tabstop>
+  <tabstop>di_MixNoise</tabstop>
+  <tabstop>di_MixExtV</tabstop>
+  <tabstop>di_LpfFr</tabstop>
+  <tabstop>di_LpfRes</tabstop>
+  <tabstop>di_LpfAudioMod</tabstop>
+  <tabstop>di_LpfAm</tabstop>
+  <tabstop>di_LpfEnvVel</tabstop>
+  <tabstop>di_LpfEnvAm</tabstop>
+  <tabstop>di_LpfDel</tabstop>
+  <tabstop>di_LpfAtt</tabstop>
+  <tabstop>di_LpfDec</tabstop>
+  <tabstop>di_LpfSus</tabstop>
+  <tabstop>di_LpfRel</tabstop>
+  <tabstop>chB_Lpf4Pole</tabstop>
+  <tabstop>di_AmpVca</tabstop>
+  <tabstop>di_AmpAm</tabstop>
+  <tabstop>di_AmpVel</tabstop>
+  <tabstop>di_AmpDel</tabstop>
+  <tabstop>di_AmpAtt</tabstop>
+  <tabstop>di_AmpDec</tabstop>
+  <tabstop>di_AmpSus</tabstop>
+  <tabstop>di_AmpRel</tabstop>
+  <tabstop>di_AmpVol</tabstop>
+  <tabstop>coB_Env3Dest</tabstop>
+  <tabstop>di_Env3Am</tabstop>
+  <tabstop>di_Env3Vel</tabstop>
+  <tabstop>di_Env3Del</tabstop>
+  <tabstop>di_Env3Att</tabstop>
+  <tabstop>di_Env3Att</tabstop>
+  <tabstop>di_Env3Sus</tabstop>
+  <tabstop>di_Env3Rel</tabstop>
+  <tabstop>chB_Env3RepM</tabstop>
+  <tabstop>di_LfoF1</tabstop>
+  <tabstop>di_LfoA1</tabstop>
+  <tabstop>chB_LfoKeyS1</tabstop>
+  <tabstop>coB_LfoS1</tabstop>
+  <tabstop>coB_LfoD1</tabstop>
+  <tabstop>di_LfoF2</tabstop>
+  <tabstop>di_LfoA2</tabstop>
+  <tabstop>chB_LfoKeyS2</tabstop>
+  <tabstop>coB_LfoS2</tabstop>
+  <tabstop>coB_LfoD2</tabstop>
+  <tabstop>di_LfoF3</tabstop>
+  <tabstop>di_LfoA3</tabstop>
+  <tabstop>chB_LfoKeyS3</tabstop>
+  <tabstop>coB_LfoS3</tabstop>
+  <tabstop>coB_LfoD3</tabstop>
+  <tabstop>di_LfoF4</tabstop>
+  <tabstop>di_LfoA4</tabstop>
+  <tabstop>chB_LfoKeyS4</tabstop>
+  <tabstop>coB_LfoS4</tabstop>
+  <tabstop>coB_LfoD4</tabstop>
+  <tabstop>coB_ModSource1</tabstop>
+  <tabstop>di_ModSourceAm1</tabstop>
+  <tabstop>coB_ModSourceDest1</tabstop>
+  <tabstop>coB_ModSource2</tabstop>
+  <tabstop>di_ModSourceAm2</tabstop>
+  <tabstop>coB_ModSourceDest2</tabstop>
+  <tabstop>coB_ModSource3</tabstop>
+  <tabstop>di_ModSourceAm3</tabstop>
+  <tabstop>coB_ModSourceDest3</tabstop>
+  <tabstop>coB_ModSource4</tabstop>
+  <tabstop>di_ModSourceAm4</tabstop>
+  <tabstop>coB_ModSourceDest4</tabstop>
+  <tabstop>di_ModModWheelAm</tabstop>
+  <tabstop>coB_ModModWheelDest</tabstop>
+  <tabstop>di_ModPressAm</tabstop>
+  <tabstop>coB_ModPressDest</tabstop>
+  <tabstop>di_ModBreathAm</tabstop>
+  <tabstop>coB_ModBreathDest</tabstop>
+  <tabstop>di_ModVelocAm</tabstop>
+  <tabstop>coB_ModVelocDest</tabstop>
+  <tabstop>di_ModFootAm</tabstop>
+  <tabstop>coB_ModFootDest</tabstop>
+  <tabstop>coB_AssKn1</tabstop>
+  <tabstop>coB_AssKn2</tabstop>
+  <tabstop>coB_AssKn3</tabstop>
+  <tabstop>coB_AssKn4</tabstop>
+  <tabstop>di_Temp</tabstop>
+  <tabstop>chB_Appr</tabstop>
+  <tabstop>coB_Appr</tabstop>
+  <tabstop>coB_PiNote</tabstop>
+  <tabstop>di_PiVel</tabstop>
+  <tabstop>coB_PiPiMode</tabstop>
+  <tabstop>comboBox_31</tabstop>
+  <tabstop>verticalSlider</tabstop>
+  <tabstop>verticalSlider_2</tabstop>
+  <tabstop>verticalSlider_4</tabstop>
+  <tabstop>verticalSlider_3</tabstop>
+  <tabstop>verticalSlider_5</tabstop>
+  <tabstop>verticalSlider_6</tabstop>
+  <tabstop>verticalSlider_7</tabstop>
+  <tabstop>verticalSlider_8</tabstop>
+  <tabstop>verticalSlider_9</tabstop>
+  <tabstop>verticalSlider_10</tabstop>
+  <tabstop>verticalSlider_11</tabstop>
+  <tabstop>verticalSlider_12</tabstop>
+  <tabstop>verticalSlider_13</tabstop>
+  <tabstop>verticalSlider_14</tabstop>
+  <tabstop>verticalSlider_15</tabstop>
+  <tabstop>verticalSlider_16</tabstop>
+  <tabstop>comboBox_32</tabstop>
+  <tabstop>comboBox_33</tabstop>
+  <tabstop>comboBox_34</tabstop>
+  <tabstop>checkBox_13</tabstop>
+  <tabstop>comboBox_35</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
