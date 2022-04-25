@@ -57,6 +57,9 @@
       <property name="toolTip">
        <string/>
       </property>
+      <property name="statusTip">
+       <string>Editor tab</string>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
       </property>
@@ -138,12 +141,6 @@
                <property name="spacing">
                 <number>3</number>
                </property>
-               <item row="0" column="0">
-                <widget class="QLineEdit" name="lineE_ProgProgName"/>
-               </item>
-               <item row="4" column="0">
-                <widget class="QComboBox" name="coB_ProgBankLoc"/>
-               </item>
                <item row="3" column="0">
                 <widget class="QLabel" name="lab_Prog_ProgType">
                  <property name="text">
@@ -151,6 +148,13 @@
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QComboBox" name="coB_ProgProgType">
+                 <property name="toolTip">
+                  <string>Select the program catagory type</string>
                  </property>
                 </widget>
                </item>
@@ -164,8 +168,19 @@
                  </property>
                 </widget>
                </item>
-               <item row="2" column="0">
-                <widget class="QComboBox" name="coB_ProgProgType"/>
+               <item row="0" column="0">
+                <widget class="QLineEdit" name="lineE_ProgProgName">
+                 <property name="toolTip">
+                  <string>Type the program name</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QComboBox" name="coB_ProgBankLoc">
+                 <property name="toolTip">
+                  <string>Select bank location</string>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="lab_ProgProgName">
@@ -257,6 +272,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Sustain level of the filter ADSR envelope generator.</string>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="3">
@@ -284,7 +302,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Resonance</string>
+                  <string>Sets the Resonance level of the filter.</string>
                  </property>
                  <property name="statusTip">
                   <string>Resonance</string>
@@ -307,6 +325,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets a delay between the time the filter envelope is triggered and when the Attack portion actually begins.</string>
                  </property>
                 </widget>
                </item>
@@ -344,6 +365,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Release time of the filter ADSR envelope generator.</string>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="4">
@@ -370,6 +394,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Decay time of the filter ADSR envelope generator.</string>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="1">
@@ -385,6 +412,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the Attack time of the filter ADSR envelope generator.</string>
                  </property>
                 </widget>
                </item>
@@ -423,7 +453,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Frequency</string>
+                  <string>Sets the base filter cutoff frequency over more than 13 octaves</string>
                  </property>
                  <property name="statusTip">
                   <string>Frequency</string>
@@ -435,6 +465,9 @@
                </item>
                <item row="3" column="5">
                 <widget class="QCheckBox" name="chB_Lpf4Pole">
+                 <property name="toolTip">
+                  <string>Selects either 2- or 4-pole operation for the filter.</string>
+                 </property>
                  <property name="layoutDirection">
                   <enum>Qt::LeftToRight</enum>
                  </property>
@@ -456,6 +489,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Controls the amount of audio from Oscillator 1 used to modulate the filter cutoff frequency.</string>
                  </property>
                 </widget>
                </item>
@@ -484,7 +520,7 @@
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Amount</string>
+                  <string>Sets the amount of keyboard (MIDI note) to the filter cutoff.</string>
                  </property>
                  <property name="statusTip">
                   <string>Amount</string>
@@ -518,6 +554,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Amount of key velocity controlling the level of the filter envelope.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -546,6 +585,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of filter envelope routed to the cutoff frequency.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -607,6 +649,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the programmed tempo for the sequencer in BPM (beats per minute).</string>
+                 </property>
                 </widget>
                </item>
                <item row="2" column="0">
@@ -664,10 +709,17 @@
                 <number>3</number>
                </property>
                <item row="1" column="0">
-                <widget class="QComboBox" name="coB_Appr"/>
+                <widget class="QComboBox" name="coB_Appr">
+                 <property name="toolTip">
+                  <string>Sets the order in which the arpeggiator plays notes.</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="0">
                 <widget class="QCheckBox" name="chB_Appr">
+                 <property name="toolTip">
+                  <string>Turns the arpeggiator on and off.</string>
+                 </property>
                  <property name="text">
                   <string>App On/Off</string>
                  </property>
@@ -782,6 +834,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Oscilator 1 Frequency Fine</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -821,6 +876,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the bend range, in semitones, of the pitch wheel.</string>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="3">
@@ -836,6 +894,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the oscillator glide (portamento) rate.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -863,7 +924,11 @@
                 </widget>
                </item>
                <item row="3" column="6">
-                <widget class="QComboBox" name="coB_KeyMode"/>
+                <widget class="QComboBox" name="coB_KeyMode">
+                 <property name="toolTip">
+                  <string>Determines how Mopho responds to keyed notes.</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="3">
                 <widget class="QDial" name="Di_OscGlide1">
@@ -879,13 +944,20 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the oscillator glide (portamento) rate.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
                 </widget>
                </item>
                <item row="0" column="6">
-                <widget class="QComboBox" name="coB_GlideMode"/>
+                <widget class="QComboBox" name="coB_GlideMode">
+                 <property name="toolTip">
+                  <string>Sets the way the oscillators respond to Glide settings.</string>
+                 </property>
+                </widget>
                </item>
                <item row="3" column="0">
                 <widget class="QDial" name="Di_OscFreq2">
@@ -900,6 +972,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Oscilator 2 Frequency</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -918,6 +993,9 @@
                </item>
                <item row="5" column="0" colspan="2">
                 <widget class="QCheckBox" name="chB_OscSync">
+                 <property name="toolTip">
+                  <string>Turns oscillator hard sync on</string>
+                 </property>
                  <property name="text">
                   <string>Sync Osc2-&gt;Osc1</string>
                  </property>
@@ -935,6 +1013,9 @@
                </item>
                <item row="0" column="4">
                 <widget class="QCheckBox" name="chB_OscKeyboard1">
+                 <property name="toolTip">
+                  <string>Turns keyboard tracking for the oscillator on and off.</string>
+                 </property>
                  <property name="text">
                   <string>Keyboard</string>
                  </property>
@@ -942,6 +1023,9 @@
                </item>
                <item row="3" column="4">
                 <widget class="QCheckBox" name="chB_OscKeyboard2">
+                 <property name="toolTip">
+                  <string>Turns keyboard tracking for the oscillator on and off.</string>
+                 </property>
                  <property name="text">
                   <string>Keyboard</string>
                  </property>
@@ -966,6 +1050,9 @@
                    <width>0</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>The amount of random oscillator frequency slop.</string>
                  </property>
                 </widget>
                </item>
@@ -1029,6 +1116,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Oscilator 1 Shape AND Pulse Width Modulation</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1041,9 +1131,6 @@
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="buddy">
-                  <cstring>lab_OscShPW1</cstring>
                  </property>
                 </widget>
                </item>
@@ -1071,6 +1158,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Oscilator 2 Shape AND Pulse Width Modulation</string>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="1">
@@ -1086,6 +1176,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string> Oscilator 2 Frequency Fine</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1147,6 +1240,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Controls the volume of white noise mixed into the filter.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1166,6 +1262,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Controls the level of external audio input mixed into the filter.</string>
+                 </property>
                 </widget>
                </item>
                <item row="0" column="1">
@@ -1181,6 +1280,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Enables the outputs of Oscillators 1 and 2 to be mixed in varying amounts.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1200,6 +1302,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sub-oscillator 2 generates a square wave pitched two octaves below oscillator 2</string>
                  </property>
                 </widget>
                </item>
@@ -1267,6 +1372,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sub-oscillator 1 generates a square wave pitched one octave below oscillator 1</string>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="0">
@@ -1327,6 +1435,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of LFO routed to the destination.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1345,6 +1456,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of LFO routed to the destination.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1375,6 +1489,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the LFO frequency.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1382,6 +1499,10 @@
                </item>
                <item row="2" column="0" colspan="2">
                 <widget class="QCheckBox" name="chB_LfoKeyS1">
+                 <property name="toolTip">
+                  <string>When on, the LFO is re-started each time a new note is
+played.</string>
+                 </property>
                  <property name="text">
                   <string>Key Sync</string>
                  </property>
@@ -1411,13 +1532,20 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of LFO routed to the destination.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0" colspan="2">
-                <widget class="QComboBox" name="coB_LfoS1"/>
+                <widget class="QComboBox" name="coB_LfoS1">
+                 <property name="toolTip">
+                  <string>Selects the LFO waveshape</string>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="lab_LfoF1">
@@ -1453,6 +1581,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the LFO frequency.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1482,6 +1613,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the LFO frequency.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1500,6 +1634,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the LFO frequency.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1527,7 +1664,11 @@
                 </widget>
                </item>
                <item row="5" column="0" colspan="2">
-                <widget class="QComboBox" name="coB_LfoD1"/>
+                <widget class="QComboBox" name="coB_LfoD1">
+                 <property name="toolTip">
+                  <string>Set LFO modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="5">
                 <widget class="QLabel" name="lab_LfoA3">
@@ -1552,6 +1693,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of LFO routed to the destination.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1580,6 +1724,10 @@
                </item>
                <item row="2" column="2" colspan="2">
                 <widget class="QCheckBox" name="chB_LfoKeyS2">
+                 <property name="toolTip">
+                  <string>When on, the LFO is re-started each time a new note is
+played.</string>
+                 </property>
                  <property name="text">
                   <string>Key Sync</string>
                  </property>
@@ -1587,6 +1735,10 @@
                </item>
                <item row="2" column="4" colspan="2">
                 <widget class="QCheckBox" name="chB_LfoKeyS3">
+                 <property name="toolTip">
+                  <string>When on, the LFO is re-started each time a new note is
+played.</string>
+                 </property>
                  <property name="text">
                   <string>Key Sync</string>
                  </property>
@@ -1594,28 +1746,56 @@
                </item>
                <item row="2" column="6" colspan="2">
                 <widget class="QCheckBox" name="chB_LfoKeyS4">
+                 <property name="toolTip">
+                  <string>When on, the LFO is re-started each time a new note is
+played.</string>
+                 </property>
                  <property name="text">
                   <string>Key Sync</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="6" colspan="2">
-                <widget class="QComboBox" name="coB_LfoS4"/>
+                <widget class="QComboBox" name="coB_LfoS4">
+                 <property name="toolTip">
+                  <string>Selects the LFO waveshape</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="6" colspan="2">
-                <widget class="QComboBox" name="coB_LfoD4"/>
+                <widget class="QComboBox" name="coB_LfoD4">
+                 <property name="toolTip">
+                  <string>Set LFO modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="4" colspan="2">
-                <widget class="QComboBox" name="coB_LfoD3"/>
+                <widget class="QComboBox" name="coB_LfoD3">
+                 <property name="toolTip">
+                  <string>Set LFO modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="3" column="4" colspan="2">
-                <widget class="QComboBox" name="coB_LfoS3"/>
+                <widget class="QComboBox" name="coB_LfoS3">
+                 <property name="toolTip">
+                  <string>Selects the LFO waveshape</string>
+                 </property>
+                </widget>
                </item>
                <item row="3" column="2" colspan="2">
-                <widget class="QComboBox" name="coB_LfoS2"/>
+                <widget class="QComboBox" name="coB_LfoS2">
+                 <property name="toolTip">
+                  <string>Selects the LFO waveshape</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="2" colspan="2">
-                <widget class="QComboBox" name="coB_LfoD2"/>
+                <widget class="QComboBox" name="coB_LfoD2">
+                 <property name="toolTip">
+                  <string>Set LFO modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="4" column="2" colspan="2">
                 <widget class="QLabel" name="lab_LfoS2">
@@ -1784,6 +1964,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Sustain level of the VCA ADSR envelope generator.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1802,6 +1985,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the Decay time of the VCA ADSR envelope generator.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1822,6 +2008,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the volume of the current program to match volumes between programs.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1841,6 +2030,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets a delay between the time the amplifier envelope is triggered and when the Attack portion actually begins.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1859,6 +2051,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the Release time of the VCA ADSR envelope generator.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1889,6 +2084,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Attack time of the VCA ADSR envelope generator.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1908,6 +2106,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets a base level for the VCA (Voltage Controlled Amplifier).</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -1926,6 +2127,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of VCA envelope to the VCA level.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -1975,6 +2179,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of keyboard velocity controlling the level of the VCA envelope.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -2036,6 +2243,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of modulation.</string>
+                 </property>
                 </widget>
                </item>
                <item row="1" column="0">
@@ -2049,13 +2259,25 @@
                 </widget>
                </item>
                <item row="4" column="3">
-                <widget class="QComboBox" name="coB_ModSourceDest4"/>
+                <widget class="QComboBox" name="coB_ModSourceDest4">
+                 <property name="toolTip">
+                  <string>Selects a modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="coB_ModSource1"/>
+                <widget class="QComboBox" name="coB_ModSource1">
+                 <property name="toolTip">
+                  <string>Selects a modulation source.</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QComboBox" name="coB_ModSource2"/>
+                <widget class="QComboBox" name="coB_ModSource2">
+                 <property name="toolTip">
+                  <string>Selects a modulation source.</string>
+                 </property>
+                </widget>
                </item>
                <item row="2" column="1">
                 <widget class="QDial" name="di_ModSourceAm2">
@@ -2070,6 +2292,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of modulation.</string>
                  </property>
                 </widget>
                </item>
@@ -2107,6 +2332,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of modulation.</string>
+                 </property>
                 </widget>
                </item>
                <item row="1" column="1">
@@ -2133,6 +2361,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the maximum amount of modulation that can be applied from MIDI note-on velocity.</string>
+                 </property>
                 </widget>
                </item>
                <item row="6" column="1">
@@ -2149,10 +2380,18 @@
                 </spacer>
                </item>
                <item row="0" column="3">
-                <widget class="QComboBox" name="coB_ModSource4"/>
+                <widget class="QComboBox" name="coB_ModSource4">
+                 <property name="toolTip">
+                  <string>Selects a modulation source.</string>
+                 </property>
+                </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="coB_ModSourceDest1"/>
+                <widget class="QComboBox" name="coB_ModSourceDest1">
+                 <property name="toolTip">
+                  <string>Selects a modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="3" column="2">
                 <widget class="QLabel" name="lab_ModSourceAm3">
@@ -2198,13 +2437,24 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of modulation.</string>
+                 </property>
                 </widget>
                </item>
                <item row="9" column="4">
-                <widget class="QComboBox" name="coB_ModFootDest"/>
+                <widget class="QComboBox" name="coB_ModFootDest">
+                 <property name="toolTip">
+                  <string>Selects the destination to which the foot control is routed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="9" column="3">
-                <widget class="QComboBox" name="coB_ModVelocDest"/>
+                <widget class="QComboBox" name="coB_ModVelocDest">
+                 <property name="toolTip">
+                  <string>Selects the destination to which the note-on velocity is routed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="1">
                 <widget class="QLabel" name="lab_ModSourceDest2">
@@ -2237,7 +2487,11 @@
                 </widget>
                </item>
                <item row="4" column="2">
-                <widget class="QComboBox" name="coB_ModSourceDest3"/>
+                <widget class="QComboBox" name="coB_ModSourceDest3">
+                 <property name="toolTip">
+                  <string>Selects a modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="7" column="4">
                 <widget class="QDial" name="di_ModFootAm">
@@ -2246,6 +2500,9 @@
                    <width>16</width>
                    <height>16</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 4 (foot controller).</string>
                  </property>
                 </widget>
                </item>
@@ -2260,7 +2517,11 @@
                 </widget>
                </item>
                <item row="9" column="0">
-                <widget class="QComboBox" name="coB_ModModWheelDest"/>
+                <widget class="QComboBox" name="coB_ModModWheelDest">
+                 <property name="toolTip">
+                  <string>Selects the destination to which the mod wheel is routed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="7" column="1">
                 <widget class="QDial" name="di_ModPressAm">
@@ -2275,6 +2536,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the maximum amount of modulation that can be applied from MIDI Channel Pressure (aftertouch).</string>
                  </property>
                 </widget>
                </item>
@@ -2312,6 +2576,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 2 (breath controller).</string>
+                 </property>
                 </widget>
                </item>
                <item row="8" column="4">
@@ -2325,10 +2592,18 @@
                 </widget>
                </item>
                <item row="9" column="2">
-                <widget class="QComboBox" name="coB_ModBreathDest"/>
+                <widget class="QComboBox" name="coB_ModBreathDest">
+                 <property name="toolTip">
+                  <string>Selects the destination to which the breath control is routed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="4" column="1">
-                <widget class="QComboBox" name="coB_ModSourceDest2"/>
+                <widget class="QComboBox" name="coB_ModSourceDest2">
+                 <property name="toolTip">
+                  <string>Selects a modulation destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="3">
                 <widget class="QLabel" name="lab_ModSource4">
@@ -2341,7 +2616,11 @@
                 </widget>
                </item>
                <item row="0" column="2">
-                <widget class="QComboBox" name="coB_ModSource3"/>
+                <widget class="QComboBox" name="coB_ModSource3">
+                 <property name="toolTip">
+                  <string>Selects a modulation source.</string>
+                 </property>
+                </widget>
                </item>
                <item row="7" column="0">
                 <widget class="QDial" name="di_ModModWheelAm">
@@ -2357,10 +2636,17 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 1 (mod wheel).</string>
+                 </property>
                 </widget>
                </item>
                <item row="9" column="1">
-                <widget class="QComboBox" name="coB_ModPressDest"/>
+                <widget class="QComboBox" name="coB_ModPressDest">
+                 <property name="toolTip">
+                  <string>Selects the destination to which the Channel Pressure is routed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="3" column="3">
                 <widget class="QLabel" name="lab_ModSourceAm4">
@@ -2499,6 +2785,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Attack time of Envelope 3.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -2518,6 +2807,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the Sustain level of Envelope 3.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -2536,6 +2828,9 @@
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the Release time of Envelope 3.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -2596,6 +2891,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of Envelope 3.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -2615,6 +2913,9 @@
                    <height>500</height>
                   </size>
                  </property>
+                 <property name="toolTip">
+                  <string>Sets a delay between the time Envelope 3 is triggered and when the Attack portion actually begins.</string>
+                 </property>
                  <property name="maximum">
                   <number>127</number>
                  </property>
@@ -2631,10 +2932,17 @@
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="coB_Env3Dest"/>
+                <widget class="QComboBox" name="coB_Env3Dest">
+                 <property name="toolTip">
+                  <string>Sets the Envelope 3 destination.</string>
+                 </property>
+                </widget>
                </item>
                <item row="2" column="5">
                 <widget class="QCheckBox" name="chB_Env3RepM">
+                 <property name="toolTip">
+                  <string>When on, causes the delay, attack, decay, and sustain portions of Envelope 3 to loop for as long as the envelope is gated on.</string>
+                 </property>
                  <property name="text">
                   <string>Repeat
 mode</string>
@@ -2654,6 +2962,10 @@ mode</string>
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the amount of key velocity controlling the level of
+envelope 3.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -2683,6 +2995,9 @@ mode</string>
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the Decay time of Envelope 3.</string>
                  </property>
                  <property name="maximum">
                   <number>127</number>
@@ -2731,10 +3046,18 @@ mode</string>
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="coB_PiNote"/>
+                <widget class="QComboBox" name="coB_PiNote">
+                 <property name="toolTip">
+                  <string>Sets the note that plays when PUSH IT is pressed.</string>
+                 </property>
+                </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="coB_PiPiMode"/>
+                <widget class="QComboBox" name="coB_PiPiMode">
+                 <property name="toolTip">
+                  <string>Push It Selection mode</string>
+                 </property>
+                </widget>
                </item>
                <item row="5" column="0">
                 <widget class="QLabel" name="lab_PIMode">
@@ -2759,6 +3082,9 @@ mode</string>
                    <width>500</width>
                    <height>500</height>
                   </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Sets the MIDI note-on velocity.</string>
                  </property>
                 </widget>
                </item>
@@ -2843,13 +3169,25 @@ mode</string>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QComboBox" name="coB_AssKn2"/>
+                <widget class="QComboBox" name="coB_AssKn2">
+                 <property name="toolTip">
+                  <string>Select the assigneble parameter</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QComboBox" name="coB_AssKn1"/>
+                <widget class="QComboBox" name="coB_AssKn1">
+                 <property name="toolTip">
+                  <string>Select the assigneble parameter</string>
+                 </property>
+                </widget>
                </item>
                <item row="6" column="0">
-                <widget class="QComboBox" name="coB_AssKn4"/>
+                <widget class="QComboBox" name="coB_AssKn4">
+                 <property name="toolTip">
+                  <string>Select the assigneble parameter</string>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="lab_AssKn1">
@@ -2872,7 +3210,11 @@ mode</string>
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="coB_AssKn3"/>
+                <widget class="QComboBox" name="coB_AssKn3">
+                 <property name="toolTip">
+                  <string>Select the assigneble parameter</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -3341,32 +3683,32 @@ mode</string>
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionNew_Program"/>
-    <addaction name="actionOpen_Program"/>
+    <addaction name="actionNewProgram"/>
+    <addaction name="actionOpenProgram"/>
     <addaction name="action_2"/>
     <addaction name="separator"/>
-    <addaction name="actionClose_App"/>
+    <addaction name="actionCloseApp"/>
    </widget>
    <widget class="QMenu" name="menuMidi">
     <property name="title">
      <string>&amp;Midi</string>
     </property>
-    <addaction name="actionReceive_Program"/>
-    <addaction name="actionTransmit_Program"/>
+    <addaction name="actionReceiveProgram"/>
+    <addaction name="actionTransmitProgram"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>&amp;Edit</string>
     </property>
-    <addaction name="actionCopy_Program"/>
-    <addaction name="actionPaste_Program"/>
+    <addaction name="actionCopyProgram"/>
+    <addaction name="actionPasteProgram"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuMidi"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionNew_Program">
+  <action name="actionNewProgram">
    <property name="text">
     <string>&amp;New Program</string>
    </property>
@@ -3374,7 +3716,7 @@ mode</string>
     <string>Ctrl+N</string>
    </property>
   </action>
-  <action name="actionOpen_Program">
+  <action name="actionOpenProgram">
    <property name="text">
     <string>&amp;Open Program</string>
    </property>
@@ -3382,7 +3724,7 @@ mode</string>
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="actionReceive_Program">
+  <action name="actionReceiveProgram">
    <property name="text">
     <string>&amp;Receive Program</string>
    </property>
@@ -3390,7 +3732,7 @@ mode</string>
     <string>Ctrl+R</string>
    </property>
   </action>
-  <action name="actionTransmit_Program">
+  <action name="actionTransmitProgram">
    <property name="text">
     <string>&amp;Transmit Program</string>
    </property>
@@ -3398,7 +3740,7 @@ mode</string>
     <string>Ctrl+T</string>
    </property>
   </action>
-  <action name="actionCopy_Program">
+  <action name="actionCopyProgram">
    <property name="text">
     <string>&amp;Copy Program</string>
    </property>
@@ -3406,7 +3748,7 @@ mode</string>
     <string>Ctrl+C</string>
    </property>
   </action>
-  <action name="actionPaste_Program">
+  <action name="actionPasteProgram">
    <property name="text">
     <string>&amp;Paste Program</string>
    </property>
@@ -3414,7 +3756,7 @@ mode</string>
     <string>Ctrl+V</string>
    </property>
   </action>
-  <action name="actionClose_App">
+  <action name="actionCloseApp">
    <property name="text">
     <string>&amp;Close App</string>
    </property>
