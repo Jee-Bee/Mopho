@@ -142,9 +142,9 @@
                 <number>3</number>
                </property>
                <item row="3" column="0">
-                <widget class="QLabel" name="lab_Prog_ProgType">
+                <widget class="QLabel" name="lab_ProgCatagory">
                  <property name="text">
-                  <string>Program Type</string>
+                  <string>Program Catagory</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -152,7 +152,7 @@
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QComboBox" name="coB_ProgProgType">
+                <widget class="QComboBox" name="coB_ProgCatagory">
                  <property name="toolTip">
                   <string>Select the program catagory type</string>
                  </property>
@@ -169,7 +169,7 @@
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QLineEdit" name="lineE_ProgProgName">
+                <widget class="QLineEdit" name="lineE_ProgName">
                  <property name="toolTip">
                   <string>Type the program name</string>
                  </property>
@@ -183,7 +183,7 @@
                 </widget>
                </item>
                <item row="1" column="0">
-                <widget class="QLabel" name="lab_ProgProgName">
+                <widget class="QLabel" name="lab_ProgName">
                  <property name="text">
                   <string>Program Name</string>
                  </property>
@@ -275,6 +275,9 @@
                  <property name="toolTip">
                   <string>Sets the Sustain level of the filter ADSR envelope generator.</string>
                  </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="3">
@@ -329,6 +332,9 @@
                  <property name="toolTip">
                   <string>Sets a delay between the time the filter envelope is triggered and when the Attack portion actually begins.</string>
                  </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="2">
@@ -368,6 +374,9 @@
                  <property name="toolTip">
                   <string>Sets the Release time of the filter ADSR envelope generator.</string>
                  </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                 </widget>
                </item>
                <item row="4" column="4">
@@ -397,6 +406,9 @@
                  <property name="toolTip">
                   <string>Sets the Decay time of the filter ADSR envelope generator.</string>
                  </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="1">
@@ -415,6 +427,9 @@
                  </property>
                  <property name="toolTip">
                   <string>Sets the Attack time of the filter ADSR envelope generator.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
@@ -459,7 +474,7 @@
                   <string>Frequency</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>164</number>
                  </property>
                 </widget>
                </item>
@@ -492,6 +507,9 @@
                  </property>
                  <property name="toolTip">
                   <string>Controls the amount of audio from Oscillator 1 used to modulate the filter cutoff frequency.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
@@ -590,7 +608,7 @@
                   <string>Sets the amount of filter envelope routed to the cutoff frequency.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>254</number>
                  </property>
                 </widget>
                </item>
@@ -651,6 +669,12 @@
                  </property>
                  <property name="toolTip">
                   <string>Sets the programmed tempo for the sequencer in BPM (beats per minute).</string>
+                 </property>
+                 <property name="minimum">
+                  <number>30</number>
+                 </property>
+                 <property name="maximum">
+                  <number>250</number>
                  </property>
                 </widget>
                </item>
@@ -813,7 +837,7 @@
                   <string>Oscilator 1 Frequency</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>120</number>
                  </property>
                  <property name="wrapping">
                   <bool>false</bool>
@@ -838,7 +862,7 @@
                   <string>Oscilator 1 Frequency Fine</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>100</number>
                  </property>
                 </widget>
                </item>
@@ -878,6 +902,9 @@
                  </property>
                  <property name="toolTip">
                   <string>Sets the bend range, in semitones, of the pitch wheel.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>12</number>
                  </property>
                 </widget>
                </item>
@@ -977,7 +1004,7 @@
                   <string>Oscilator 2 Frequency</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>120</number>
                  </property>
                 </widget>
                </item>
@@ -1054,6 +1081,9 @@
                  <property name="toolTip">
                   <string>The amount of random oscillator frequency slop.</string>
                  </property>
+                 <property name="maximum">
+                  <number>5</number>
+                 </property>
                 </widget>
                </item>
                <item row="1" column="3">
@@ -1120,7 +1150,7 @@
                   <string>Oscilator 1 Shape AND Pulse Width Modulation</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>103</number>
                  </property>
                 </widget>
                </item>
@@ -1161,6 +1191,9 @@
                  <property name="toolTip">
                   <string>Oscilator 2 Shape AND Pulse Width Modulation</string>
                  </property>
+                 <property name="maximum">
+                  <number>103</number>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="1">
@@ -1181,7 +1214,7 @@
                   <string> Oscilator 2 Frequency Fine</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>100</number>
                  </property>
                 </widget>
                </item>
@@ -1265,6 +1298,9 @@
                  <property name="toolTip">
                   <string>Controls the level of external audio input mixed into the filter.</string>
                  </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
                 </widget>
                </item>
                <item row="0" column="1">
@@ -1305,6 +1341,9 @@
                  </property>
                  <property name="toolTip">
                   <string>Sub-oscillator 2 generates a square wave pitched two octaves below oscillator 2</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
@@ -1374,6 +1413,9 @@
                  </property>
                  <property name="toolTip">
                   <string>Sub-oscillator 1 generates a square wave pitched one octave below oscillator 1</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
                  </property>
                 </widget>
                </item>
@@ -1493,7 +1535,7 @@
                   <string>Sets the LFO frequency.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>166</number>
                  </property>
                 </widget>
                </item>
@@ -1585,7 +1627,7 @@ played.</string>
                   <string>Sets the LFO frequency.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>166</number>
                  </property>
                 </widget>
                </item>
@@ -1617,7 +1659,7 @@ played.</string>
                   <string>Sets the LFO frequency.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>166</number>
                  </property>
                 </widget>
                </item>
@@ -1639,7 +1681,7 @@ played.</string>
                   <string>Sets the LFO frequency.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>166</number>
                  </property>
                 </widget>
                </item>
@@ -2230,7 +2272,7 @@ played.</string>
                 </widget>
                </item>
                <item row="2" column="3">
-                <widget class="QDial" name="di_ModSourceAm4">
+                <widget class="QDial" name="di_ModAmount4">
                  <property name="minimumSize">
                   <size>
                    <width>16</width>
@@ -2246,6 +2288,9 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the amount of modulation.</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="1" column="0">
@@ -2259,7 +2304,7 @@ played.</string>
                 </widget>
                </item>
                <item row="4" column="3">
-                <widget class="QComboBox" name="coB_ModSourceDest4">
+                <widget class="QComboBox" name="coB_ModDest4">
                  <property name="toolTip">
                   <string>Selects a modulation destination.</string>
                  </property>
@@ -2280,7 +2325,7 @@ played.</string>
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QDial" name="di_ModSourceAm2">
+                <widget class="QDial" name="di_ModAmount2">
                  <property name="minimumSize">
                   <size>
                    <width>16</width>
@@ -2296,10 +2341,13 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the amount of modulation.</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="5" column="2">
-                <widget class="QLabel" name="lab_ModSourceDest3">
+                <widget class="QLabel" name="lab_ModDest3">
                  <property name="text">
                   <string>Destination</string>
                  </property>
@@ -2309,7 +2357,7 @@ played.</string>
                 </widget>
                </item>
                <item row="5" column="0">
-                <widget class="QLabel" name="lab_ModSourceDest1">
+                <widget class="QLabel" name="lab_ModDest1">
                  <property name="text">
                   <string>Destination</string>
                  </property>
@@ -2319,7 +2367,7 @@ played.</string>
                 </widget>
                </item>
                <item row="2" column="2">
-                <widget class="QDial" name="di_ModSourceAm3">
+                <widget class="QDial" name="di_ModAmount3">
                  <property name="minimumSize">
                   <size>
                    <width>16</width>
@@ -2334,6 +2382,9 @@ played.</string>
                  </property>
                  <property name="toolTip">
                   <string>Sets the amount of modulation.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>254</number>
                  </property>
                 </widget>
                </item>
@@ -2364,6 +2415,9 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the maximum amount of modulation that can be applied from MIDI note-on velocity.</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="6" column="1">
@@ -2387,14 +2441,14 @@ played.</string>
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="coB_ModSourceDest1">
+                <widget class="QComboBox" name="coB_ModDest1">
                  <property name="toolTip">
                   <string>Selects a modulation destination.</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="2">
-                <widget class="QLabel" name="lab_ModSourceAm3">
+                <widget class="QLabel" name="lab_ModAmount3">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -2404,7 +2458,7 @@ played.</string>
                 </widget>
                </item>
                <item row="5" column="3">
-                <widget class="QLabel" name="lab_ModSourceDest4">
+                <widget class="QLabel" name="lab_ModDest4">
                  <property name="text">
                   <string>Destination</string>
                  </property>
@@ -2414,7 +2468,7 @@ played.</string>
                 </widget>
                </item>
                <item row="3" column="1">
-                <widget class="QLabel" name="lab_ModSourceAm2">
+                <widget class="QLabel" name="lab_ModAmount2">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -2424,7 +2478,7 @@ played.</string>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QDial" name="di_ModSourceAm1">
+                <widget class="QDial" name="di_ModAmount1">
                  <property name="minimumSize">
                   <size>
                    <width>16</width>
@@ -2439,6 +2493,9 @@ played.</string>
                  </property>
                  <property name="toolTip">
                   <string>Sets the amount of modulation.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>254</number>
                  </property>
                 </widget>
                </item>
@@ -2457,7 +2514,7 @@ played.</string>
                 </widget>
                </item>
                <item row="5" column="1">
-                <widget class="QLabel" name="lab_ModSourceDest2">
+                <widget class="QLabel" name="lab_ModDest2">
                  <property name="text">
                   <string>Destination</string>
                  </property>
@@ -2487,7 +2544,7 @@ played.</string>
                 </widget>
                </item>
                <item row="4" column="2">
-                <widget class="QComboBox" name="coB_ModSourceDest3">
+                <widget class="QComboBox" name="coB_ModDest3">
                  <property name="toolTip">
                   <string>Selects a modulation destination.</string>
                  </property>
@@ -2503,6 +2560,9 @@ played.</string>
                  </property>
                  <property name="toolTip">
                   <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 4 (foot controller).</string>
+                 </property>
+                 <property name="maximum">
+                  <number>254</number>
                  </property>
                 </widget>
                </item>
@@ -2540,10 +2600,13 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the maximum amount of modulation that can be applied from MIDI Channel Pressure (aftertouch).</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="3" column="0">
-                <widget class="QLabel" name="lab_ModSourceAm1">
+                <widget class="QLabel" name="lab_ModAmount1">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -2579,6 +2642,9 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 2 (breath controller).</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="8" column="4">
@@ -2599,7 +2665,7 @@ played.</string>
                 </widget>
                </item>
                <item row="4" column="1">
-                <widget class="QComboBox" name="coB_ModSourceDest2">
+                <widget class="QComboBox" name="coB_ModDest2">
                  <property name="toolTip">
                   <string>Selects a modulation destination.</string>
                  </property>
@@ -2639,6 +2705,9 @@ played.</string>
                  <property name="toolTip">
                   <string>Sets the maximum amount of modulation that can be applied from MIDI Continuous Controller 1 (mod wheel).</string>
                  </property>
+                 <property name="maximum">
+                  <number>254</number>
+                 </property>
                 </widget>
                </item>
                <item row="9" column="1">
@@ -2649,7 +2718,7 @@ played.</string>
                 </widget>
                </item>
                <item row="3" column="3">
-                <widget class="QLabel" name="lab_ModSourceAm4">
+                <widget class="QLabel" name="lab_ModAmount4">
                  <property name="text">
                   <string>Amount</string>
                  </property>
@@ -2764,7 +2833,7 @@ played.</string>
                <item row="1" column="0">
                 <widget class="QLabel" name="lab_Env3Dest">
                  <property name="text">
-                  <string>Destenation</string>
+                  <string>Destination</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2895,7 +2964,7 @@ played.</string>
                   <string>Sets the amount of Envelope 3.</string>
                  </property>
                  <property name="maximum">
-                  <number>127</number>
+                  <number>254</number>
                  </property>
                 </widget>
                </item>
@@ -3053,7 +3122,7 @@ envelope 3.</string>
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QComboBox" name="coB_PiPiMode">
+                <widget class="QComboBox" name="coB_PiMode">
                  <property name="toolTip">
                   <string>Push It Selection mode</string>
                  </property>
@@ -3085,6 +3154,12 @@ envelope 3.</string>
                  </property>
                  <property name="toolTip">
                   <string>Sets the MIDI note-on velocity.</string>
+                 </property>
+                 <property name="maximum">
+                  <number>127</number>
+                 </property>
+                 <property name="value">
+                  <number>120</number>
                  </property>
                 </widget>
                </item>
@@ -3772,8 +3847,8 @@ envelope 3.</string>
  </widget>
  <tabstops>
   <tabstop>tabWidget</tabstop>
-  <tabstop>lineE_ProgProgName</tabstop>
-  <tabstop>coB_ProgProgType</tabstop>
+  <tabstop>lineE_ProgName</tabstop>
+  <tabstop>coB_ProgCatagory</tabstop>
   <tabstop>coB_ProgBankLoc</tabstop>
   <tabstop>Di_OscFreq1</tabstop>
   <tabstop>Di_OscFine1</tabstop>
@@ -3846,17 +3921,17 @@ envelope 3.</string>
   <tabstop>coB_LfoS4</tabstop>
   <tabstop>coB_LfoD4</tabstop>
   <tabstop>coB_ModSource1</tabstop>
-  <tabstop>di_ModSourceAm1</tabstop>
-  <tabstop>coB_ModSourceDest1</tabstop>
+  <tabstop>di_ModAmount1</tabstop>
+  <tabstop>coB_ModDest1</tabstop>
   <tabstop>coB_ModSource2</tabstop>
-  <tabstop>di_ModSourceAm2</tabstop>
-  <tabstop>coB_ModSourceDest2</tabstop>
+  <tabstop>di_ModAmount2</tabstop>
+  <tabstop>coB_ModDest2</tabstop>
   <tabstop>coB_ModSource3</tabstop>
-  <tabstop>di_ModSourceAm3</tabstop>
-  <tabstop>coB_ModSourceDest3</tabstop>
+  <tabstop>di_ModAmount3</tabstop>
+  <tabstop>coB_ModDest3</tabstop>
   <tabstop>coB_ModSource4</tabstop>
-  <tabstop>di_ModSourceAm4</tabstop>
-  <tabstop>coB_ModSourceDest4</tabstop>
+  <tabstop>di_ModAmount4</tabstop>
+  <tabstop>coB_ModDest4</tabstop>
   <tabstop>di_ModModWheelAm</tabstop>
   <tabstop>coB_ModModWheelDest</tabstop>
   <tabstop>di_ModPressAm</tabstop>
@@ -3876,7 +3951,7 @@ envelope 3.</string>
   <tabstop>coB_Appr</tabstop>
   <tabstop>coB_PiNote</tabstop>
   <tabstop>di_PiVel</tabstop>
-  <tabstop>coB_PiPiMode</tabstop>
+  <tabstop>coB_PiMode</tabstop>
   <tabstop>comboBox_31</tabstop>
   <tabstop>verticalSlider</tabstop>
   <tabstop>verticalSlider_2</tabstop>
